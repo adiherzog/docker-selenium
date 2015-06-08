@@ -8,11 +8,9 @@ Selenium Standalone Server with Firefox
 
 ## How to use this image
 
-
 ```
 $ docker run -d -P selenium/standalone-firefox
 ```
-
 
 You can acquire the port that Selenium is listening on by running:
 
@@ -20,6 +18,11 @@ You can acquire the port that Selenium is listening on by running:
 $ docker port <container-name|container-id> 4444
 #=> 0.0.0.0:49338
 ```
+
+WARNING: There are two major issues with this image, check them if you are experiencing troubles:
+
+* [Firefox node issue, browser hangs](https://github.com/SeleniumHQ/docker-selenium/issues/31)
+* [Use specific Firefox Version](https://github.com/SeleniumHQ/docker-selenium/issues/36)
 
 ## What is Selenium?
 _Selenium automates browsers._ That's it! What you do with that power is entirely up to you. Primarily, it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
